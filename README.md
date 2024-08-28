@@ -6,4 +6,4 @@
 Crear páginas en este caso home
 `ionic g page pages/home`
 
-(Personalizar colores)[https://ionicframework.com/docs/theming/color-generator]
+[Personalizar colores](https://ionicframework.com/docs/theming/color-generator)
