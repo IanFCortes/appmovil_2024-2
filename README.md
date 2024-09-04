@@ -7,3 +7,5 @@ Crear páginas en este caso home
 `ionic g page pages/home`
 
 [Personalizar colores](https://ionicframework.com/docs/theming/color-generator)
+
+### actualizado 04-09-2024
