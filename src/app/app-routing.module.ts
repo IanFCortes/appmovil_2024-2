@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'alertas',
     loadChildren: () => import('./pages/alertas/alertas.module').then( m => m.AlertasPageModule)
   },
+  {
+    path: 'formulario',
+    loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule)
+  },
 
 ];
 
