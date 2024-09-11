@@ -9,6 +9,8 @@ export class EncabezadoComponent  implements OnInit {
 
 
   @Input() titulo:string=''
+  saludo:string='Hola'
+
   constructor() { }
 
   ngOnInit() {}
