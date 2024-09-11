@@ -2,6 +2,7 @@
   <ion-toolbar color="tertiary">
     <ion-icon slot="start" name="menu" class="ion-padding" size="large"></ion-icon>
     <ion-title class="ion-text-center">Home</ion-title>
+    <ion-icon slot="end" name="person-outline" class="ion-padding" size="large"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
@@ -17,7 +18,7 @@
     
     <ion-item routerLink="{{menulink.link}}" detail="true" *ngFor="let menulink of links" >
       <ion-icon slot="start" name="{{menulink.icono}}"></ion-icon>
-      <ion-label>{{menulink.label}}</ion-label>
+      <ion-label class="ion-text-capitalize">{{menulink.label}}</ion-label>
     </ion-item>
 
 

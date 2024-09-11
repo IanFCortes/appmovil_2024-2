@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonesPage implements OnInit {
 
+  mensaje:string=''
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  saludo(){
+    console.log("hola");
+    this.mensaje='Hola desde el botón amarillo';
+  }
 }
