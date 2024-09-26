@@ -1,0 +1,12 @@
+.center-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Hace que el contenedor ocupe todo el ancho */
+}
+
+ion-button {
+    --padding-start: 0;
+    --padding-end: 0;
+}

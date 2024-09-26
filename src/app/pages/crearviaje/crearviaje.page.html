@@ -1,52 +1,16 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home" text="Volver"></ion-back-button>
-    </ion-buttons>
-    <ion-title class="ion-text-center">Home</ion-title>
-    <ion-icon slot="end" name="person-outline" class="ion-padding" size="large" (click)="tologin()"></ion-icon>
-  </ion-toolbar>
-</ion-header>
+<app-encabezado></app-encabezado>
 
 <ion-content class="ion-padding">
-  <ion-list [inset]="true" lines="full" mode="ios">
-    <ion-list-header mode="ios" color="primary">
-      <ion-label>Crear un viaje</ion-label>
-    </ion-list-header>
-
-    <!-- Selección de Destino -->
-    <ion-item class="ion-item">
-      <ion-label>Selecciona el destino</ion-label>
-    </ion-item>
-    <ion-item class="ion-select-item">
-      <ion-select placeholder="Selecciona uno" interface="popover">
-        <ion-select-option value="destino1">Destino 1</ion-select-option>
-        <ion-select-option value="destino2">Destino 2</ion-select-option>
-        <ion-select-option value="destino3">Destino 3</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <!-- Selección de Precio -->
-    <ion-item>
-      <ion-label>Selecciona el Precio</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-input type="number" placeholder="Ingresa el precio"></ion-input>
-    </ion-item>
-
-    <!-- Selección de Cantidad de Pasajeros -->
-    <ion-item>
-      <ion-label>Selecciona la cantidad de pasajeros</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-input type="number" placeholder="Cantidad de pasajeros"></ion-input>
-    </ion-item>
-
-    <!-- Botón para enviar el formulario -->
-    <ion-item lines="none">
-      <ion-button expand="block" color="primary">
-        Crear Viaje
-      </ion-button>
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Crear viaje</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Aqui podras crear un viaje y publicarlo para que otras personas puedan unirse.
+    </ion-card-content>
+    <ion-button  fill="clear">Crear viaje</ion-button>
+  </ion-card>
 </ion-content>
+
+<app-footer></app-footer>

@@ -1,9 +1,15 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home" text="Volver"></ion-back-button>
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="tologin()">
+        <ion-icon slot="icon-only"  name="person-circle"></ion-icon>
+      </ion-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">Home</ion-title>
-    <ion-icon slot="end" name="person-outline" class="ion-padding" (click)="tologin()" size="large"></ion-icon>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ToHome</ion-title>
   </ion-toolbar>
 </ion-header>

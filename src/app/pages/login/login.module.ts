@@ -8,7 +8,6 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
 import { ComponentsModule } from 'src/app/components/components.module';
-import { EncabezadoComponent } from 'src/app/components/encabezado/encabezado.component';
 
 @NgModule({
   imports: [
