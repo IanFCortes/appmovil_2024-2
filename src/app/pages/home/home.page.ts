@@ -44,12 +44,17 @@ export class HomePage implements OnInit {
 
   crearViaje() {
     // Aquí puedes agregar la lógica para crear el viaje
-    console.log('Destino:', this.crearviaje.destino);
-    console.log('Precio:', this.crearviaje.precio);
-    console.log('Cantidad de pasajeros:', this.crearviaje.pasajeros);
     this.router.navigate(["/crearviaje"]);
 
     // Si necesitas hacer algo más con los datos, como validarlos o enviarlos a una API, puedes agregarlo aquí.
+  }
+  
+  unirseViaje() {
+    this.router.navigate(["/unirseviaje"]);
+  }
+
+  tologin() {
+    this.router.navigate(["/login"]);
   }
 
 }

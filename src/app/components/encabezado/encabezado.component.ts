@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-encabezado',
@@ -11,8 +12,12 @@ export class EncabezadoComponent  implements OnInit {
   @Input() titulo:string=''
   saludo:string='Hola'
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
+
+  tologin() {
+    this.router.navigate(["/login"]);
+  }
 
 }
