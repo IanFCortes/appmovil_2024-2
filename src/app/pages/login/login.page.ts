@@ -4,45 +4,50 @@ import { AlertController } from '@ionic/angular';
 import { UsuarioLog } from 'src/app/interfaces/i_usuario';
 
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.page.html',
-  styleUrls: ['./formulario.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
-export class FormularioPage implements OnInit {
-  
-  usr:UsuarioLog={
-    username:'',
-    password:''
+export class LoginPage implements OnInit {
+
+  usr: UsuarioLog = {
+    username: '',
+    password: ''
 
   }
-  constructor(private router:Router, private alertController:AlertController) { }
+  constructor(private router: Router, private alertController: AlertController) { }
 
   ngOnInit() {
   }
 
-  iniciar_sesion(){
+  iniciar_sesion() {
     console.log("Iniciar sesion");
-    if(this.usr.username=="waco" && this.usr.password=="123"){
+    if (this.usr.username == "usuario" && this.usr.password == "123") {
       this.router.navigate(["/home"]);
     }
-    else{
+    else {
       this.alerta();
     }
   }
 
+  registrarse() {
+    console.log("Registrarse");
+    this.router.navigate(["/registrousuario"]);
+  } 
 
-  async alerta(){
 
-   
+  async alerta() {
+
+
     const alert = await this.alertController.create({
       header: 'Acceso denegado',
       subHeader: 'Usuario y/o contraseña incorrecta',
       message: 'chao!!!!',
-      backdropDismiss:false,
-      buttons: [ {
-        text:"Aceptar",
-        cssClass:'btn-verde',
-        handler:()=>{
+      backdropDismiss: false,
+      buttons: [{
+        text: "Aceptar",
+        cssClass: 'btn-verde',
+        handler: () => {
           console.log("Apreto aceptar desde controller");
         }
       },],

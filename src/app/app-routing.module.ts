@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -23,6 +23,24 @@ const routes: Routes = [
     path: 'formulario',
     loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registrousuario',
+    loadChildren: () => import('./pages/registrousuario/registrousuario.module').then( m => m.RegistrousuarioPageModule)
+  },  {
+    path: 'crearviaje',
+    loadChildren: () => import('./pages/crearviaje/crearviaje.module').then( m => m.CrearviajePageModule)
+  },
+  {
+    path: 'unirseviaje',
+    loadChildren: () => import('./pages/unirseviaje/unirseviaje.module').then( m => m.UnirseviajePageModule)
+  },
+
+
+
 
 ];
 

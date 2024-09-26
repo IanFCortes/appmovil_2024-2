@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Login</ion-title>
+    <ion-icon slot="end" name="person-outline" class="ion-padding" size="large"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text color="primary" class="ion-text-center">
+    <h1>Login</h1>
+  </ion-text>
+
+  <form #miForm="ngForm" (ngSubmit)="iniciar_sesion()">
+    <ion-list>
+      <ion-item>
+        <ion-input required type="text" label="Nombre de Usuario" labelPlacement="floating" placeholder="usuario"
+          [(ngModel)]="usr.username" name="nom_usuario_input"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input required type="password" label="Contraseña" labelPlacement="floating" [(ngModel)]="usr.password"
+          name="usr_pass_input" placeholder="***********"></ion-input>
+      </ion-item>
+
+      <ion-button type="submit" expand="block" fill="solid" [disabled]="miForm.invalid">
+        Iniciar sesión
+      </ion-button>
+    </ion-list> 
+  </form>
+
+  <ion-button type="sumbit" (click)="registrarse()" fill="solid">
+    Registrarse
+  </ion-button>
+
+</ion-content>

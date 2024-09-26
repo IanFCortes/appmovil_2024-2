@@ -3,3 +3,9 @@ export interface UsuarioLog{
     password:string,
    
 }
+
+export interface UsuarioReg{
+    username:string,
+    password:string,
+    repassword:string,
+}
