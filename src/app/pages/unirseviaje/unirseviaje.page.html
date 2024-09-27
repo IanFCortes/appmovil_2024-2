@@ -9,7 +9,7 @@
   <ion-card>
     <ion-list>
       <ion-item *ngFor="let item of items" [button]="true" (click)="selectItem(item)">
-        <ion-icon slot="start" [name]="item.icon"></ion-icon> <!-- Usar ion-icon aquí -->
+        <ion-icon slot="start" [name]="item.icon"></ion-icon>
         <ion-label>{{ item.name }}</ion-label>
         <ion-checkbox slot="end" [(ngModel)]="item.selected" [disabled]="true"></ion-checkbox>
       </ion-item>

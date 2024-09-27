@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'unirseviaje',
     loadChildren: () => import('./pages/unirseviaje/unirseviaje.module').then( m => m.UnirseviajePageModule)
   },
+  {
+    path: 'recuperarcontrasenia',
+    loadChildren: () => import('./pages/recuperarcontrasenia/recuperarcontrasenia.module').then( m => m.RecuperarcontraseniaPageModule)
+  },
 
 
 

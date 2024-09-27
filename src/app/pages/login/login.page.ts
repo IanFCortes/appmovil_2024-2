@@ -35,6 +35,9 @@ export class LoginPage implements OnInit {
     this.router.navigate(["/registrousuario"]);
   } 
 
+  torecuperarpswrd() {
+    this.router.navigate(["/recuperarcontrasenia"]);
+  }
 
   async alerta() {
 

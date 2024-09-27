@@ -1,0 +1,54 @@
+<app-encabezado></app-encabezado>
+<ion-text color="primary" class="ion-text-center">
+  <h1>Recuperar contraseña</h1>
+</ion-text>
+<br>
+<br>
+<br>
+<br>
+
+<ion-content class="ion-padding">
+  <form #miForm="ngForm" (ngSubmit)="tologin(miForm)" novalidate>
+    <ion-list>
+      <!-- Campo de correo con validaciones -->
+      <ion-item>
+        <ion-input type="email" 
+                   label="Correo institucional" 
+                   labelPlacement="floating" 
+                   placeholder="Ingresa tu correo institucional" 
+                   name="correo" 
+                   [(ngModel)]="correo"
+                   #correoInput="ngModel"
+                   required
+                   email
+                   [ngModelOptions]="{ updateOn: 'blur' }">
+        </ion-input>
+      </ion-item>
+  
+      <!-- Mensajes de error -->
+      <div *ngIf="correoInput.invalid && correoInput.touched">
+        <ion-text color="danger" *ngIf="correoInput.errors?.['required']">
+          El correo es obligatorio.
+        </ion-text>
+        <ion-text color="danger" *ngIf="correoInput.errors?.['email']">
+          Ingresa un correo válido.
+        </ion-text>
+        <ion-text color="danger" *ngIf="correoInput.errors?.['domainInvalid']">
+          El correo debe ser del dominio &#64;duocuc.cl.
+        </ion-text>
+      </div>
+  
+      <br>
+      
+      <!-- Botón de envío deshabilitado si el formulario es inválido -->
+      <ion-button type="submit" expand="block" fill="solid" [disabled]="miForm.invalid">
+        Enviar
+      </ion-button>
+    </ion-list>
+  </form>
+  
+  
+
+</ion-content>
+
+<app-footer></app-footer>
