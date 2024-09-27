@@ -4,24 +4,47 @@
     <h1>Registrarse</h1>
   </ion-text>
 
-  <form #miForm="ngForm" (ngSubmit)="registrado()">
+  <form #miForm="ngForm" (ngSubmit)="registrado(miForm)" novalidate>
     <ion-list>
       <ion-item>
-        <ion-input required type="text" label="Nombre de Usuario" labelPlacement="floating" placeholder="Ingresa tu nombre de usuario"
-          [(ngModel)]="usr.username" name="nom_usuario_input"></ion-input>
+        <ion-input required 
+                   type="text" 
+                   label="Nombre de Usuario" 
+                   labelPlacement="floating" 
+                   placeholder="Ingresa tu nombre de usuario"
+                   [(ngModel)]="usr.username" 
+                   name="nom_usuario_input">
+        </ion-input>
       </ion-item>
       <ion-item>
-        <ion-input required type="text" label="Contraseña" labelPlacement="floating" [(ngModel)]="usr.password"
-          name="usr_pass_input" placeholder="Ingresa tu contraseña"></ion-input>
+        <ion-input required 
+                   type="password" 
+                   label="Contraseña" 
+                   labelPlacement="floating" 
+                   [(ngModel)]="usr.password"
+                   name="usr_pass_input" 
+                   placeholder="Ingresa tu contraseña">
+        </ion-input>
       </ion-item>
       <ion-item>
-        <ion-input required type="text" label="Repite Contraseña" labelPlacement="floating" [(ngModel)]="usr.repassword"
-          name="usr_repass_input" placeholder="Ingresa de nuevo tucontraseña"></ion-input>
+        <ion-input required 
+                   type="password" 
+                   label="Repite Contraseña" 
+                   labelPlacement="floating" 
+                   [(ngModel)]="usr.repassword"
+                   name="usr_repass_input" 
+                   placeholder="Ingresa de nuevo tu contraseña">
+        </ion-input>
       </ion-item>
       
-      <ion-button type="submit" expand="block" fill="solid">
-        Registrate
+      <ion-button type="submit" expand="block" fill="solid" [disabled]="miForm.invalid || usr.password !== usr.repassword">
+        Regístrate
       </ion-button>
+
+      <!-- Mensaje de error si las contraseñas no coinciden -->
+      <ion-text color="danger" *ngIf="usr.password !== usr.repassword && miForm.controls['usr_repass_input']?.touched">
+        Las contraseñas no coinciden.
+      </ion-text>
     </ion-list> 
   </form>
 </ion-content>
